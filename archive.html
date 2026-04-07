@@ -6,7 +6,7 @@
     <title>Archive — The Musement Arcade</title>
     <link rel="stylesheet" href="/style.css">
   </head>
-  <body>
+  <body class="archive-page">
     <div class="site-wrap">
       <header class="site-header">
         <a class="brand" href="/">
@@ -32,19 +32,19 @@
         <h2>Archive</h2>
         <p class="small">A little bookshelf of longer collections — click a book to see its chapters (each chapter links to audio recordings).</p>
 
-        <section class="grid">
-          <!-- each card below represents a book on the shelf -->
-          <a class="card" href="/archive/book-oddities.html">
+        <section class="shelf-row" aria-label="Bookshelf">
+          <!-- each book below is rendered as a vertical spine; click to open the book -->
+          <a class="book-spine" href="/archive/book-oddities.html" aria-label="The Cabinet of Curious Oddities">
             <h3>The Cabinet of Curious Oddities</h3>
-            <p class="small">A collection of short collected lectures and readings.</p>
+            <span class="subtitle">A collection of short collected lectures and readings.</span>
           </a>
 
-          <a class="card" href="/archive/book-vegetable-rites.html">
+          <a class="book-spine" href="/archive/book-vegetable-rites.html" aria-label="Vegetable Rites">
             <h3>Vegetable Rites</h3>
-            <p class="small">A small book about gardens, squashes and porch rituals.</p>
+            <span class="subtitle">A small book about gardens, squashes and porch rituals.</span>
           </a>
 
-          <!-- add more book cards here -->
+          <!-- add more spine elements here -->
         </section>
       </main>
 
