@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Essays</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <h1>Essays</h1>
-    <nav>
-      <a href="/">Home</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Essays — The Musement Arcade</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="site-wrap">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <div class="logo">MA</div>
+          <div>
+            <h1>The Musement Arcade</h1>
+            <p class="small">short pieces • little observances</p>
+          </div>
+        </a>
 
-  <ul class="essay-list">
-    <li><a href="/essays/on-glasses.html">On Glasses</a></li>
-    <li><a href="/essays/on-squash.html">On Squash</a></li>
-    <li><a href="/essays/on-being-in-trees.html">On Being in Trees</a></li>
-  </ul>
-</body>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/essays.html" class="active">Essays</a>
+          <a href="/words.html">Word</a>
+          <a href="/wises.html">Wise</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Find me</a>
+          <a href="/lucky.html">Lucky</a>
+        </nav>
+      </header>
+
+      <main>
+        <h2>Essays</h2>
+        <p class="small">Short meditations and 'On...' pieces. Click a title to read.</p>
+
+        <section class="shelf">
+          <ul class="essay-list">
+            <li><a href="/essays/on-glasses.html">On Glasses</a></li>
+            <li><a href="/essays/on-squash.html">On Squash</a></li>
+            <!-- Add new essays in the essays/ folder and list them here -->
+          </ul>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>© The Musement Arcade</div>
+        <div class="small">A curated shelf of short pieces.</div>
+      </footer>
+    </div>
+  </body>
 </html>

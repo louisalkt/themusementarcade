@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Your Name</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <h1>Your Name</h1>
-    <nav>
-      <a href="/essays.html">Essays</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Find Me</a>
-      <a href="/words.html">Word</a>
-      <a href="/wises.html">Wise</a>
-      <a href="/lucky.html">Lucky</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Musement Arcade</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="site-wrap">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <div class="logo">MA</div>
+          <div>
+            <h1>The Musement Arcade</h1>
+            <p class="small">short pieces • little observances</p>
+          </div>
+        </a>
 
-  <main>
-    <section class="latest">
-      <h2>Latest</h2>
-      <h3><a href="/essays/on-glasses.html">On Glasses</a></h3>
-      <p>A short excerpt or opening line goes here.</p>
-    </section>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/" class="active">Home</a>
+          <a href="/essays.html">Essays</a>
+          <a href="/words.html">Word</a>
+          <a href="/wises.html">Wise</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Find me</a>
+          <a href="/lucky.html">Lucky</a>
+        </nav>
+      </header>
 
-    <section>
-      <h2>On...</h2>
-      <ul class="essay-list">
-        <li><a href="/essays/on-glasses.html">On Glasses</a></li>
-        <li><a href="/essays/on-squash.html">On Squash</a></li>
-      </ul>
-    </section>
-  </main>
+      <main>
+        <section class="hero">
+          <div class="intro">
+            <h2>Quiet, curious pieces about small things</h2>
+            <p>Short essays and observations collected from things seen, read and felt. Shelf-friendly writing — for the bedside, the bench, the tram.</p>
+          </div>
+          <div class="card">
+            <h3>Latest</h3>
+            <p><a href="/essays/on-glasses.html">On Glasses</a></p>
+            <p class="small">A short opening line goes here — a taste of what follows.</p>
+          </div>
+        </section>
 
-  <footer>
-    <p>© Musement</p>
-  </footer>
-</body>
+        <section>
+          <h3>Explore</h3>
+          <div class="grid">
+            <div class="card">
+              <h3><a href="/essays.html">Essays</a></h3>
+              <p>Collected pieces in the 'On...' form: on glasses, on squash, on being in trees.</p>
+            </div>
+            <div class="card">
+              <h3><a href="/words.html">Word of the week</a></h3>
+              <p>A word, its curious history and a few short notes about why it matters this week.</p>
+            </div>
+            <div class="card">
+              <h3><a href="/wises.html">Wise of the week</a></h3>
+              <p>Short bits of advice, aphorisms or stray sentences that stick.</p>
+            </div>
+            <div class="card">
+              <h3><a href="/lucky.html">I'm feeling lucky</a></h3>
+              <p>Jump to a random piece when indecisive or bored.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <div>© The Musement Arcade</div>
+        <div class="small">Built for quietness. Designed for reading.</div>
+      </footer>
+    </div>
+  </body>
 </html>
