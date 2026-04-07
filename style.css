@@ -1,0 +1,56 @@
+body {
+  font-family: "Georgia", "Garamond", serif;
+  background: #f4f3ee;
+  color: #2a2a2a;
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  margin-right: 18px;
+  text-decoration: none;
+  color: #555;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.essay-list {
+  list-style: none;
+  padding: 0;
+}
+
+.essay-list li {
+  margin-bottom: 12px;
+}
+
+.latest {
+  margin-bottom: 50px;
+}
+
+blockquote {
+  border-left: 2px solid #ccc;
+  padding-left: 15px;
+  color: #555;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9em;
+  color: #777;
+}
