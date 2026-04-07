@@ -43,15 +43,7 @@ header.site-header{
 .brand{
   display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);
 }
-.brand .logo{
-  width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-3));
-  box-shadow:inset 0 -3px 10px rgba(255,255,255,0.12);
-  display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  overflow:hidden;
-}
-/* if the logo is an image, make it fit the square */
-.brand .logo img{width:100%;height:100%;display:block;object-fit:cover}
-.brand h1{font-size:1.15rem;margin:0}
+.brand h1{font-size:1.25rem;margin:0}
 .brand p{margin:0;font-size:0.85rem;color:var(--muted)}
 
 /* whimsical floating accent behind header */
@@ -93,6 +85,8 @@ article.post h1{font-family:'EB Garamond', Georgia, serif;margin-top:0;font-size
 article.post .meta{color:var(--muted);font-size:0.9rem;margin-bottom:16px}
 article.post p{margin:0 0 16px 0}
 article.post hr{border:none;border-top:1px solid rgba(37,50,56,0.06);margin:28px 0}
+/* add breathing room for readable mobile pages */
+article.post{padding:4px 2px}
 
 ul.essay-list{list-style:none;padding:0;margin:0}
 ul.essay-list li{padding:10px 0;border-bottom:1px dashed rgba(37,50,56,0.04)}
@@ -112,10 +106,12 @@ footer.site-footer{margin-top:34px;padding-top:12px;border-top:1px solid rgba(37
 
 /* Responsive tweaks */
 @media (max-width:720px){
-  .site-wrap{margin:18px;padding:18px}
+  body{font-size:16px}
+  .site-wrap{margin:18px;padding:20px}
   .hero{flex-direction:column}
   nav.main-nav{flex-wrap:wrap}
   .hero h2{font-size:1.4rem}
+  article.post{padding:8px 6px}
   article.post h1{font-size:1.4rem}
 }
 
