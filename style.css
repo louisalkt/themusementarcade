@@ -29,7 +29,8 @@
 
   --tape-1: rgba(110,176,216,0.55);   /* blue washi tape */
   --tape-2: rgba(116,187,142,0.55);   /* green washi tape */
-  --tape-3: rgba(184,69,122,0.38);    /* pink washi tape */
+  --tape-3: rgba(123,92,184,0.45);   /* lilac washi tape */
+  --tape-4: rgba(184,69,122,0.38);    /* pink washi tape */
 
   --max-width: 960px;
   --radius-card: 3px;
