@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>The Musement Arcade</title>
     <link rel="stylesheet" href="/style.css">
+    <style>
+      .lucky-float {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(calc(100% - 14px));
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 380ms cubic-bezier(.2,.9,.3,1);
+        cursor: pointer;
+      }
+      .lucky-tab {
+        background: var(--pink, #b8457a);
+        color: #fff;
+        font-family: 'EB Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 0.92rem;
+        font-weight: 700;
+        padding: 5px 22px 7px;
+        border-radius: 10px 10px 0 0;
+        letter-spacing: 0.02em;
+        box-shadow: 0 -3px 12px rgba(184,69,122,0.18);
+        white-space: nowrap;
+        user-select: none;
+      }
+      .lucky-btn-body {
+        background: var(--pink-light, #f7dcea);
+        border: 2px solid var(--pink, #b8457a);
+        border-bottom: none;
+        border-radius: 14px 14px 0 0;
+        padding: 22px 36px 28px;
+        text-align: center;
+        box-shadow: 0 -8px 32px rgba(184,69,122,0.13);
+        min-width: 260px;
+      }
+      .lucky-btn-body .btn-label {
+        font-family: 'EB Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--pink, #b8457a);
+        display: block;
+        margin-bottom: 6px;
+      }
+      .lucky-btn-body .btn-sub {
+        font-family: 'EB Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 0.88rem;
+        color: var(--ink-faint, #8a7a68);
+      }
+      .lucky-float:hover,
+      .lucky-float:focus-within {
+        transform: translateX(-50%) translateY(0);
+      }
+      .site-wrap { margin-bottom: 80px; }
+    </style>
   </head>
   <body>
     <div class="site-wrap">
@@ -22,7 +80,6 @@
           <a href="/essays.html">Essays</a>
           <a href="/words.html">Words</a>
           <a href="/wises.html">Wises</a>
-          <a href="/lucky.html">Lucky?</a>
           <a href="/archive.html">Archive</a>
           <a href="/contact.html">Find me</a>
         </nav>
@@ -56,10 +113,6 @@
               <h3><a href="/wises.html">Wises of the week</a></h3>
               <p>Funny little rules and modest commandments to carry in your pocket.</p>
             </div>
-            <div class="card">
-              <h3><a href="/lucky.html">I'm feeling lucky...</a></h3>
-              <p>A cheerful press of the button and fate will choose a piece for you.</p>
-            </div>
           </div>
         </section>
 
@@ -70,5 +123,31 @@
         <div class="small">Built for quietness. Designed for reading.</div>
       </footer>
     </div>
+    <!-- Floating lucky button -->
+    <div class="lucky-float" role="button" tabindex="0" aria-label="Take me somewhere lucky" id="luckyFloat">
+      <div class="lucky-tab">✦ I'm feeling lucky ✦</div>
+      <div class="lucky-btn-body">
+        <span class="btn-label">Take me somewhere</span>
+        <span class="btn-sub">hover to reveal · click to go</span>
+      </div>
+    </div>
+ 
+    <script>
+      (function () {
+        const pages = [
+          '/essays/on-glasses.html',
+          '/essays/on-squash.html'
+          // Add more essay paths here as you publish them.
+        ];
+        const floater = document.getElementById('luckyFloat');
+        function go() {
+          if (!pages.length) return;
+          const p = pages[Math.floor(Math.random() * pages.length)];
+          setTimeout(() => window.location.href = p, 700);
+        }
+        floater.addEventListener('click', go);
+        floater.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') go(); });
+      })();
+    </script>
   </body>
 </html>
