@@ -535,7 +535,7 @@ article.post ul li {
 .book-spine .subtitle { display: none; }
 
 /* ── Lucky button & interactive elements ── */
-.btn,
+/* .btn,
 button#luckyBtn {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 1.1rem;
@@ -559,7 +559,7 @@ button#luckyBtn:hover {
   box-shadow: 5px 6px 0 rgba(46,126,184,0.28);
   background: var(--blue);
   color: #fff;
-}
+} */
 
 /* ── Links ── */
 a, a:visited { color: var(--blue); text-decoration: none; }

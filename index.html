@@ -58,7 +58,7 @@
         font-size: 0.88rem;
         color: var(--ink-faint, #8a7a68);
       }
-      .lucky-float:open {
+      .lucky-float.open {
         transform: translateX(-50%) translateY(0);
       }
       @media (hover: hover) {
@@ -78,7 +78,7 @@
             <p class="small">short pieces • little observances</p>
           </div>
         </a>
-
+ 
         <nav class="main-nav" aria-label="Main navigation">
           <a href="/" class="active">Home</a>
           <a href="/about.html">About</a>
@@ -89,7 +89,7 @@
           <a href="/contact.html">Find me</a>
         </nav>
       </header>
-
+ 
       <main>
         <section class="hero">
           <div class="intro">
@@ -102,7 +102,7 @@
             <p class="small">A short taste: spectacles, reflections and the way faces rearrange when you look twice.</p>
           </div>
         </section>
-
+ 
         <section>
           <h3>Explore</h3>
           <div class="grid">
@@ -120,9 +120,9 @@
             </div>
           </div>
         </section>
-
+ 
       </main>
-
+ 
       <footer class="site-footer">
         <div>© The Musement Arcade</div>
         <div class="small">Built for quietness. Designed for reading.</div>
@@ -149,26 +149,35 @@
         const body    = floater.querySelector('.lucky-btn-body');
         let open = false;
  
+        function pickPage() {
+          return pages[Math.floor(Math.random() * pages.length)];
+        }
+ 
+        function go() {
+          if (!pages.length) return;
+          setTimeout(() => window.location.href = pickPage(), 600);
+        }
+ 
         function toggle(e) {
           e.stopPropagation();
           open = !open;
           floater.classList.toggle('open', open);
         }
  
-        function go(e) {
-          e.stopPropagation();
-          if (!open) return;
-          if (!pages.length) return;
-          const p = pages[Math.floor(Math.random() * pages.length)];
-          setTimeout(() => window.location.href = p, 600);
+        // Touch devices: tab toggles, body navigates
+        // Hover devices: hover opens it (CSS handles that), any click navigates
+        const isHoverDevice = window.matchMedia('(hover: hover)').matches;
+ 
+        if (isHoverDevice) {
+          floater.addEventListener('click', go);
+        } else {
+          tab.addEventListener('click', toggle);
+          body.setAttribute('tabindex', '0');
+          body.addEventListener('click', e => { e.stopPropagation(); if (open) go(); });
         }
  
-        tab.addEventListener('click', toggle);
-        tab.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') toggle(e); });
- 
-        body.setAttribute('tabindex', '0');
-        body.addEventListener('click', go);
-        body.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') go(e); });
+        // Keyboard always works
+        floater.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') go(); });
       })();
     </script>
   </body>
