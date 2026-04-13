@@ -174,7 +174,7 @@
           tab.addEventListener('click', toggle);
           body.setAttribute('tabindex', '0');
           body.addEventListener('click', e => { e.stopPropagation(); if (open) go(); });
-          document.addEventListener('click', (e) => {if (open && floater.contains(e.target)) toggle(new Event('click')); });
+          document.addEventListener('click', (e) => {if (open && !floater.contains(e.target)) toggle(new Event('click')); });
         }
  
         // Keyboard always works
