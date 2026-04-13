@@ -172,7 +172,7 @@
           floater.addEventListener('click', go);
         } else {
           //tab.addEventListener('click', toggle);
-          tab.addEventListener('click', e => { e.stopPropagation(); if (open) go(); });
+          tab.addEventListener('click', e => { if(!open) toggle(new Event('click')); else e.stopPropagation(); go(); });
           body.setAttribute('tabindex', '0');
           body.addEventListener('click', e => { e.stopPropagation(); if (open) go(); });
           document.addEventListener('click', (e) => {if (open && !floater.contains(e.target)) toggle(new Event('click')); });
