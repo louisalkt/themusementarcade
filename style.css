@@ -168,7 +168,7 @@ header.site-header {
  
 /* Decorative stamp in corner */
 header.site-header::after {
-  content: "✦ EST. MMXXIV ✦";
+  content: "✦ EST. MMXXVI ✦";
   position: absolute;
   bottom: -18px;
   left: 50%;
@@ -543,15 +543,15 @@ article.post hr {
  
 /* ── Blockquotes ── */
 blockquote {
-  border-left: 5px solid var(--green-mid);
-  background: var(--green-light);
+  border-left: 5px solid var(--blue-mid);
+  background: var(--blue-light);
   padding: 16px 20px;
   border-radius: 0 3px 3px 0;
   margin: 22px 0;
   font-style: italic;
   color: var(--ink-soft);
   font-size: 1.08rem;
-  box-shadow: 3px 4px 0 rgba(86,168,112,0.22);
+  box-shadow: 3px 4px 0 rgba(26,95,160,0.12);
   position: relative;
 }
  
@@ -559,7 +559,7 @@ blockquote::before {
   content: "\201C";
   font-family: 'DM Serif Display', Georgia, serif;
   font-size: 3.5rem;
-  color: var(--green-mid);
+  color: var(--blue-mid);
   position: absolute;
   top: -10px;
   left: 12px;
