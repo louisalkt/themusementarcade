@@ -19,8 +19,8 @@
   --blue-mid:     #5a9dc8;
   --blue-vivid:   #0e4f8a;
   --green:        #669929;
-  --green-light:  #dff6dd;
-  --green-mid:    #8cc56a;
+  --green-light:  #f3f9d4;
+  --green-mid:    #b5d66a;
   --pink:         #c0275a;
   --pink-light:   #fbd8e6;
   --pink-mid:     #e06090;
@@ -271,10 +271,10 @@ nav.main-nav a:hover {
 nav.main-nav a:nth-child(2n):hover {
   color: var(--green);
   background: var(--green-light);
-  border-color: var(--green-mid);
+  border-color: var(--green);
   transform: rotate(1.8deg) translateY(-3px);
-  /* updated to match the current --green-mid (#8cc56a => rgb(140,197,106)) */
-  box-shadow: 3px 5px 0 rgba(140,197,106,0.20);
+  /* updated to match the current --green-mid (#B5D66A => rgb(181,214,106)) */
+  box-shadow: 3px 5px 0 rgba(181,214,106,0.20);
 }
  
 nav.main-nav a:nth-child(3n):hover {
