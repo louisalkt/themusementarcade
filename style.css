@@ -18,9 +18,9 @@
   --blue-light:   #d6ebf7;
   --blue-mid:     #5a9dc8;
   --blue-vivid:   #0e4f8a;
-  --green:        #1a6b35;
-  --green-light:  #c8edcf;
-  --green-mid:    #56a870;
+  --green:        #669929;
+  --green-light:  #dff6dd;
+  --green-mid:    #8cc56a;
   --pink:         #c0275a;
   --pink-light:   #fbd8e6;
   --pink-mid:     #e06090;
@@ -31,7 +31,7 @@
   --amber-light:  #fdecc8;
  
   --tape-1: rgba(90,157,200,0.60);
-  --tape-2: rgba(86,168,112,0.60);
+  --tape-2: rgba(102, 153, 41, 0.60);
   --tape-3: rgba(96,64,176,0.50);
   --tape-4: rgba(192,39,90,0.42);
  
@@ -215,6 +215,21 @@ header.site-header::after {
   margin-top: 3px;
   letter-spacing: 0.03em;
 }
+
+.brand-logo {
+  height: 150px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  padding-left: 20px;
+  /* tune rotate/translate to taste */
+  transform: rotate(-4deg) translateY(2px);
+  transition: transform 300ms cubic-bezier(.2,.9,.3,1);
+}
+
+.brand:hover .brand-logo {
+  transform: rotate(4deg) translateY(-2px);
+}
  
 /* ── NAVIGATION ── */
 nav.main-nav {
@@ -258,7 +273,8 @@ nav.main-nav a:nth-child(2n):hover {
   background: var(--green-light);
   border-color: var(--green-mid);
   transform: rotate(1.8deg) translateY(-3px);
-  box-shadow: 3px 5px 0 rgba(26,107,53,0.20);
+  /* updated to match the current --green-mid (#8cc56a => rgb(140,197,106)) */
+  box-shadow: 3px 5px 0 rgba(140,197,106,0.20);
 }
  
 nav.main-nav a:nth-child(3n):hover {
