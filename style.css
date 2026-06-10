@@ -10,30 +10,36 @@
   --parchment-2:  #f2e8d8;
   --parchment-3:  #e0ceaf;
   --parchment-4:  #c9b48e;
-  --ink:          #1e140a;
+  /* --ink:          #1e140a; */
+  --ink:          #2f4f1a;
   --ink-soft:     #4a3828;
   --ink-faint:    #7a6650;
  
-  --blue:         #1a5fa0;
-  --blue-light:   #d6ebf7;
-  --blue-mid:     #5a9dc8;
-  --blue-vivid:   #0e4f8a;
-  --green:        #669929;
-  --green-light:  #d6f8d0;
-  --green-mid:    #8cc56a;
-  --pink:         #c0275a;
-  --pink-light:   #fbd8e6;
-  --pink-mid:     #e06090;
-  --lilac:        #6040b0;
-  --lilac-light:  #e8e0ff;
-  --lilac-mid:    #9070cc;
-  --amber:        #c06000;
-  --amber-light:  #fdecc8;
+  /* Accent colours — warmer, less saturated greens (olive/earthy); keep --pink bright */
+  --blue:         #4a6426; /* warmer, more olive */
+  --blue-light:   #f0f4e6; /* soft warm highlight */
+  --blue-mid:     #738c44; /* muted mid green */
+  --blue-vivid:   #2f4f1a; /* darker accent for contrast */
+  --green:        #4a6426; /* primary book-like green, warmer/desaturated */
+  --green-light:  #f3f6ea;
+  --green-mid:    #738c44;
+  /* Accent (formerly pink) - now green variations */
+  --pink:         #8cc56a;
+  --pink-light:   #e6f8e6;
+  --pink-mid:     #6fb24b;
+  /* Accent (formerly lilac) - now green variations */
+  --lilac:        #4b8a2f;
+  --lilac-light:  #e8f7e8;
+  --lilac-mid:    #6f9b44;
+  /* Accent (formerly amber) - now an olive-green */
+  --amber:        #557f2a;
+  --amber-light:  #eaf6dd;
  
-  --tape-1: rgba(90,157,200,0.60);
-  --tape-2: rgba(102, 153, 41, 0.60);
-  --tape-3: rgba(96,64,176,0.50);
-  --tape-4: rgba(192,39,90,0.42);
+  /* Washi tape — keep tape-2 as the exact washi green anchor; others tuned warmer/less bright */
+  --tape-1: rgba(82,140,80,0.60);
+  --tape-2: rgba(102,153,41,0.60);
+  --tape-3: rgba(46,112,40,0.50);
+  --tape-4: rgba(110,150,70,0.42);
  
   --max-width: 1020px;
   --radius-card: 2px;
@@ -264,7 +270,7 @@ nav.main-nav a:hover {
   transform: rotate(-2deg) translateY(-3px);
   background: var(--blue-light);
   border-color: var(--blue-mid);
-  box-shadow: 3px 5px 0 rgba(26,95,160,0.20);
+  box-shadow: 3px 5px 0 rgba(70,110,50,0.20);
   text-decoration: none;
 }
  
@@ -282,7 +288,7 @@ nav.main-nav a:nth-child(3n):hover {
   background: var(--pink-light);
   border-color: var(--pink-mid);
   transform: rotate(-1.2deg) translateY(-3px);
-  box-shadow: 3px 5px 0 rgba(192,39,90,0.18);
+  box-shadow: 3px 5px 0 rgba(102,153,41,0.18);
 }
  
 nav.main-nav a:nth-child(4n):hover {
@@ -290,7 +296,7 @@ nav.main-nav a:nth-child(4n):hover {
   background: var(--lilac-light);
   border-color: var(--lilac-mid);
   transform: rotate(2.2deg) translateY(-3px);
-  box-shadow: 3px 5px 0 rgba(96,64,176,0.18);
+  box-shadow: 3px 5px 0 rgba(75,138,47,0.18);
 }
  
 nav.main-nav a.active {
@@ -299,7 +305,7 @@ nav.main-nav a.active {
   border-color: var(--blue);
   font-weight: 700;
   transform: rotate(-1.2deg);
-  box-shadow: 3px 4px 0 rgba(26,95,160,0.22);
+  box-shadow: 3px 4px 0 rgba(86,168,112,0.22);
 }
  
 /* ── MAIN ── */
@@ -472,8 +478,8 @@ main > section > h3::before {
   background: var(--blue-light);
   border-color: var(--blue-mid);
   box-shadow:
-    4px 5px 0 rgba(90,157,200,0.30),
-    6px 8px 0 rgba(26,95,160,0.12);
+  4px 5px 0 rgba(70,110,50,0.26),
+  6px 8px 0 rgba(36,80,32,0.12);
 }
  
 .hero .card::before { background: var(--tape-1); }
@@ -567,7 +573,7 @@ blockquote {
   font-style: italic;
   color: var(--ink-soft);
   font-size: 1.08rem;
-  box-shadow: 3px 4px 0 rgba(26,95,160,0.12);
+  box-shadow: 3px 4px 0 rgba(60,100,45,0.12);
   position: relative;
 }
  
@@ -637,7 +643,7 @@ article.post ul li { margin-bottom: 16px; }
   --blue-light: #c8edcf;
   --blue-mid: #56a870;
   --tape-1: rgba(86,168,112,0.60);
-  --tape-2: rgba(90,157,200,0.55);
+  --tape-2: rgba(102,153,41,0.55);
 }
  
 .shelf-row {
@@ -649,7 +655,7 @@ article.post ul li { margin-bottom: 16px; }
   margin: 24px 0 48px;
   overflow-x: auto;
   background:
-    linear-gradient(to bottom, transparent 80%, rgba(150,110,70,0.10) 100%);
+    linear-gradient(to bottom, transparent 80%, rgba(120,80,30,0.10) 100%);
   border-bottom: 4px solid var(--parchment-3);
   border-radius: 0 0 2px 2px;
   position: relative;
@@ -681,8 +687,8 @@ article.post ul li { margin-bottom: 16px; }
   box-shadow:
     -3px 0 0 rgba(0,0,0,0.10) inset,
     3px 0 0 rgba(255,255,255,0.06) inset,
-    -8px 14px 32px rgba(30,14,4,0.20),
-    0 4px 8px rgba(30,14,4,0.12);
+    -8px 14px 32px rgba(20,40,10,0.20),
+    0 4px 8px rgba(20,40,10,0.12);
   transform: rotate(-5deg);
   transition: transform 300ms cubic-bezier(.2,.9,.3,1), box-shadow 250ms ease;
   border: none;
@@ -727,8 +733,8 @@ article.post ul li { margin-bottom: 16px; }
   box-shadow:
     -3px 0 0 rgba(0,0,0,0.10) inset,
     3px 0 0 rgba(255,255,255,0.06) inset,
-    -12px 30px 60px rgba(30,14,4,0.25),
-    0 8px 16px rgba(30,14,4,0.15);
+    -12px 30px 60px rgba(20,40,10,0.25),
+    0 8px 16px rgba(20,40,10,0.15);
   z-index: 5;
 }
 
@@ -789,12 +795,12 @@ a:hover, a:focus {
 /* ── Inline callout boxes ── */
 .boxed {
   background: var(--lilac-light);
-  border: 2px solid rgba(96,64,176,0.22);
+  border: 2px solid rgba(75,138,47,0.22);
   border-left: 5px solid var(--lilac);
   padding: 16px 20px;
   border-radius: 0 3px 3px 0;
   margin: 22px 0;
-  box-shadow: 3px 4px 0 rgba(96,64,176,0.14);
+  box-shadow: 3px 4px 0 rgba(75,138,47,0.14);
 }
  
 /* ── Section shelf ── */
