@@ -1,6 +1,5 @@
 (function() {
   const page = document.body.dataset.page;
-  const BASE = '/themusementarcade'; // change this to your repo name if different
 
   function inject(url, selector, position) {
     fetch(url)
@@ -18,6 +17,6 @@
       });
   }
 
-  inject(BASE + '/_header.html', 'main', 'before');
-  inject(BASE + '/_footer.html', 'main', 'after');
+  inject('/_header.html', 'main', 'before');
+  inject('/_footer.html', 'main', 'after');
 })();
