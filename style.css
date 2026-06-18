@@ -245,7 +245,7 @@ body:not(.is-index) header.site-header::after {
   flex-shrink: 0;
   padding-left: 20px;
   /* tune rotate/translate to taste */
-  transform: rotate(-4deg) translate(36px, 2px);
+  transform: rotate(-4deg) translate(18px, 2px);
   transition: transform 300ms cubic-bezier(.2,.9,.3,1);
 }
 
